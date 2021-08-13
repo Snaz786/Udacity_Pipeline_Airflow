@@ -1,6 +1,7 @@
 class SqlQueries:
-  
-     songplay_table_insert = ("""
+        
+    
+    songplay_table_insert = ("""
         SELECT
                 md5(events.sessionid || events.start_time) songplay_id,
                 events.start_time, 
@@ -19,7 +20,8 @@ class SqlQueries:
                 AND events.artist = songs.artist_name
                 AND events.length = songs.duration
     """)
-
+    
+      
     user_table_insert = ("""
         SELECT distinct userid, firstname, lastname, gender, level
         FROM staging_events
